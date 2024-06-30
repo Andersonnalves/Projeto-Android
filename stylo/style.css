@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* utf8 para padrao brasileiro de digitação com acentuação. */
+@import/* fonte inportada da web google fontes*/ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face /* fonte baixada no pc*/ {
+    font-family: "android";
+    src: url(../fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+}
+
+:root /*usado para fazer variaveis em CSS*/{
+    
+    
+    --cor00:#adf0bb;
+   --cor0: #26b845;
+   --cor1: #48b25b;
+   --cor2: #4c8851;
+   --cor3: #485f48;
+   --cor4: #2c332f;
+ 
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --font-android: "android", arial;
+}
+* /*configuração para toda a pafgina */{
+margin: 0px;
+padding: 0px;    
+}
+
+body{
+    background-color: var(--cor00);
+    font-family: var(--fonte-padrao);
+    text-align: justify;
+}
+a.externo::after { content: '\00a0\1F517';
+
+  }
+header{
+    background-image:linear-gradient(to bottom,var(--cor0),var(--cor3));
+    width: 100%;
+    min-height: 150px;
+    text-align: center;
+    padding-top: 25px;
+
+}
+
+header > h1{
+    
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 3.2em;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.514);
+}
+header >p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 30px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.514);
+}
+
+nav {
+    background-color:var(--cor3);
+    padding: 10px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.336);
+}
+nav > a{
+    color: var(--cor00);
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+nav a:hover {
+background-color:var(--cor0) ;
+color: #485f48;
+padding: 4px;
+border-radius: 3px;
+}
+main{
+    background-color: white;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 1000px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.514);
+
+}
+
+main h1, h2 {
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.6em;
+}
+main h1{
+    color: var(--cor3);
+
+}
+main h2{
+    color: var(--cor3);
+    font-size: 1.2em;
+    background-image: linear-gradient(to right, var(--cor0),transparent);
+    padding-left: 6px;
+}
+main p{
+    margin: 15px 0px;
+    text-indent :40px;
+    line-height: 1.5em;
+    font-size: 1,5em;
+}
+strong{
+    color:var(--cor2);
+    background-color: #adf0bb;
+   font-weight: bold;
+   padding: 2px 5px;
+}
+main a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #26b845;
+    
+}
+main a:hover { 
+    background-color:var(--cor0) ;
+    color: #485f48;
+    padding: 4px; 
+    text-decoration: underline;
+ }
+    
+
+main img {
+   width: 100%;
+   }
+main img.pequena { 
+    max-width: 350px ;
+    display: block;
+    margin: auto;
+}
+ div.video{
+    background-color: var(--cor3);
+    margin: 0px -6px 30px -6px;
+    padding :20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-bottom: 58%;
+    position: relative;
+ }
+ div.video > iframe{
+ position: absolute;
+ top:5% ;
+  left:5%;
+  width:90% ;
+  height: 90%;
+ }
+
+aside{
+    background-color: var(--cor3);
+    color: white;
+    padding: 10px;
+    border-radius:  5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.39);       
+}
+aside >h3{
+    background-color: var(--cor0);
+    color: white;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    border-radius: 5px 5px  0px 0px;
+}
+aside ul{
+    list-style-type: '\1F5F8\00a0\00a0';
+    list-style-position: inside;
+    columns: 2;
+}
+footer{
+    background-color: var(--cor3);
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer a{
+text-decoration: none;
+font-weight: bold;
+color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+    background-color: var(--cor1);
+    padding: 5px;
+}
